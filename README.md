@@ -1,21 +1,19 @@
 # 🐍 Python Projects by Ivo Ivanovski
 
-Welcome to my personal collection of Python projects. This repository will include a variety of projects covering beginner to intermediate topics in Python, such as games, utility scripts, and small applications.
+Welcome to my personal collection of Python projects. This repository contains a variety of projects ranging from beginner to intermediate level, including games, utility scripts, and small applications.
 
 ---
 
 ## 📁 Projects
 
-### ✅ 1. [Market Manager]
-Example:
-**Market Manager**  
-A simple command-line market manager that performs basic operations like adding and item, deleting an item, or displaying all items that have been added.
+### ✅ 1. Market Manager
+A simple command-line market manager that allows you to add items, delete items, and display all added items.
 
 ---
 
 ## 🔜 Upcoming Projects
 
-### 🔹 will be added later this week.
+More projects will be added later this week. Stay tuned!
 
 ---
 
@@ -23,6 +21,21 @@ A simple command-line market manager that performs basic operations like adding 
 
 1. Clone this repository:
 
-   ```bash
-   git clone https://github.com/IvoIvanovskii/Python_Projects.git
-   cd Python_Projects
+    ```bash
+    git clone https://github.com/IvoIvanovskii/Python_Projects.git
+    cd Python_Projects
+    ```
+
+2. Navigate to the project folder:
+
+    ```bash
+    cd Market_Manager
+    ```
+
+3. Run the project (example):
+
+    ```bash
+    python main.py
+    ```
+
+> Make sure you have Python 3.x installed on your system.
