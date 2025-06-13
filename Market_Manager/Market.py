@@ -3,8 +3,8 @@ products = {}
 def addProduct():
     name = input("Add the name of the product: ")
     nameLower = name.lower()
-    
-    if any(name.lower() == nameLower for name in products):
+
+    if any(name.lower() == nameLower for name in products):            # check if this item exists, no matter lower or higher case
         print("This product already exists")
         print()
         return
