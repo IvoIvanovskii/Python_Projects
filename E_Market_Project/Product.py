@@ -12,6 +12,7 @@ def addProduct():
     else:
        try:
           price = float(input("Enter the price of the product you just added: "))
+          quantity = int(input("Enter quantity for the product: "))
           cursor.execute("INSERT INTO products (product_name, price) VALUES (%s, %s)", (productName, price))
           db.commit()
           print (f"{productName} added successfully. ")
@@ -20,7 +21,8 @@ def addProduct():
 
     cursor.close()
     db.close()
-def view_products():
+
+def viewProducts():
     db = connect()
     cursor = db.cursor()
     cursor.execute("SELECT product_name, price FROM products")
