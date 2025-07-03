@@ -39,7 +39,7 @@ def viewProducts():
     cursor.close()
     db.close()
 
-def changePrice():
+def updatePrice():
     db = connect()
     cursor = db.cursor()
     productName = input("Enter the product name whose price you want to change. ")
@@ -58,7 +58,7 @@ def changePrice():
           print(f"Entered invalid price for {productName}.")
     else:
        print("Product not found")
-       
+
     cursor.close()
     db.close()
     
