@@ -9,6 +9,27 @@ Welcome to my personal collection of Python projects. This repository contains a
 ### ✅ 1. Market Manager
 A simple command-line market manager that allows you to add items, delete items, and display all added items.
 
+### ✅ 2. E-Market
+A more advanced command-line application that simulates an online marketplace using SQLite for data storage. Key features include:
+
+Adding new products
+
+Displaying the products
+
+Searching a specific product
+
+Deletinig a product
+
+Adding new customers
+
+Deleting old customers
+
+Adding orders
+
+Deleting orders
+
+Integrated with SQL for persistent data management
+
 ---
 
 ## 🔜 Upcoming Projects
