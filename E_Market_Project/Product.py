@@ -25,7 +25,7 @@ def addProduct():
 def viewProducts():
     db = connect()
     cursor = db.cursor()
-    cursor.execute("SELECT product_name, price, quantity FROM products")
+    cursor.execute("SELECT product_name, price, quantity FROM products ORDER BY price ASC")
     results = cursor.fetchall()
 
     if not results:
@@ -61,6 +61,29 @@ def updatePrice():
 
     cursor.close()
     db.close()
+
+def searchProduct():
+   db = connect()
+   cursor = db.cursor()
+   productName = input("Enter the product name you want to see. ")
+   nameLower = productName.lower
+
+   cursor.execute("SELECT product_name, price, quantity FROM products WHERE LOWER(product_name) = %s", (nameLower,))
+   result = cursor.fetchone
+
+   if result:
+      name, price, quantity = result
+      print (f"The product you are viewing is: {name}, price is {price}, and quantity is: {quantity}")
+
+   else:
+      print("The product you are trying to find does not exist.")
+
+    
+   cursor.close()
+   db.close
+      
+
+
     
           
 
