@@ -16,7 +16,7 @@ def menu():
         print("9. Delete Order")
         print("10. Exit")
 
-        choice = input("Choose an option (1–7): ")
+        choice = input("Choose an option (1–10): ")
 
         if choice == '1':
             addProduct()
