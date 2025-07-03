@@ -12,21 +12,21 @@ A simple command-line market manager that allows you to add items, delete items,
 ### ✅ 2. E-Market
 A more advanced command-line application that simulates an online marketplace using SQLite for data storage. Key features include:
 
-Adding new products
+- Adding new products
 
-Displaying the products
+- Displaying the products
 
-Searching a specific product
+- Searching a specific product
 
-Deletinig a product
+- Deletinig a product
 
-Adding new customers
+- Adding new customers
 
-Deleting old customers
+- Deleting old customers
 
-Adding orders
+- Adding orders
 
-Deleting orders
+- Deleting orders
 
 Integrated with SQL for persistent data management
 
