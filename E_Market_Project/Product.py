@@ -4,9 +4,9 @@ def addProduct():
     db = connect()
     cursor = db.cursor()
     productName = input("Enter the name of the product you want to add: ")
-    name_lower = productName.lower()
+    nameLower = productName.lower()
 
-    cursor.execute("SELECT product_name FROM products WHERE LOWER(product_name) = %s ", (name_lower,))
+    cursor.execute("SELECT product_name FROM products WHERE LOWER(product_name) = %s ", (nameLower,))
     if cursor.fetchone():
      print ("This product already exists.")
     else:
@@ -43,7 +43,7 @@ def updatePrice():
     db = connect()
     cursor = db.cursor()
     productName = input("Enter the product name whose price you want to change. ")
-    nameLower = productName.lower
+    nameLower = productName.lower()
 
     cursor.execute("SELECT product_name FROM products WHERE LOWER(product_name) = %s", (nameLower,))
 
@@ -51,8 +51,8 @@ def updatePrice():
        try:
           newPrice = float(input("Enter the wanted price: "))
           cursor.execute("UPDATE products SET price = %s WHERE LOWER(product_name) = %s", (newPrice, nameLower))
-
-          print(f"Price has been changed successfuly for {productName}.")
+          db.commit()
+          print(f"Price has been changed successfully for {productName}.")
 
        except ValueError:
           print(f"Entered invalid price for {productName}.")
@@ -66,10 +66,10 @@ def searchProduct():
    db = connect()
    cursor = db.cursor()
    productName = input("Enter the product name you want to see. ")
-   nameLower = productName.lower
+   nameLower = productName.lower()
 
    cursor.execute("SELECT product_name, price, quantity FROM products WHERE LOWER(product_name) = %s", (nameLower,))
-   result = cursor.fetchone
+   result = cursor.fetchone()
 
    if result:
       name, price, quantity = result
@@ -80,7 +80,7 @@ def searchProduct():
 
     
    cursor.close()
-   db.close
+   db.close()
 
 def deleteProduct():
     db = connect()
@@ -102,14 +102,3 @@ def deleteProduct():
 
     cursor.close()
     db.close()
-
-   
-
-
-    
-          
-
-          
-
-
-    
