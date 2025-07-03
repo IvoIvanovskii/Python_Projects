@@ -92,7 +92,7 @@ def deleteProduct():
     if cursor.fetchone():
         confirm = input(f"Are you sure you want to delete '{productName}'? (yes/no): ").lower()
         if confirm == "yes":
-            cursor.execute("DELETE FROM products WHERE LOWER(product_name) = %s", (name_lower,))
+            cursor.execute("DELETE FROM products WHERE LOWER(product_name) = %s", (nameLower,))
             db.commit()
             print(f"{productName} deleted successfully.")
         else:
