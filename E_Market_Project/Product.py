@@ -81,7 +81,29 @@ def searchProduct():
     
    cursor.close()
    db.close
-      
+
+def deleteProduct():
+    db = connect()
+    cursor = db.cursor()
+    productName = input("Enter the name of the product to delete: ")
+    nameLower = productName.lower()
+
+    cursor.execute("SELECT product_name FROM products WHERE LOWER(product_name) = %s", (nameLower,))
+    if cursor.fetchone():
+        confirm = input(f"Are you sure you want to delete '{productName}'? (yes/no): ").lower()
+        if confirm == "yes":
+            cursor.execute("DELETE FROM products WHERE LOWER(product_name) = %s", (name_lower,))
+            db.commit()
+            print(f"{productName} deleted successfully.")
+        else:
+            print("Deletion cancelled.")
+    else:
+        print("Product not found.")
+
+    cursor.close()
+    db.close()
+
+   
 
 
     

@@ -1,4 +1,4 @@
-from Product import addProduct, viewProducts
+from Product import addProduct, viewProducts, searchProduct, updatePrice, deleteProduct
 from Customer import addCustomer, viewCustomers
 from Order import registerOrder, deleteOrder
 
@@ -7,11 +7,14 @@ def menu():
         print("\n E-MARKET MENU")
         print("1. Add Product")
         print("2. View Products")
-        print("3. Add Customer")
-        print("4. View Customers")
-        print("5. Register Order")
-        print("6. Delete Order")
-        print("7. Exit")
+        print("3. Search Product")
+        print("4. Update Price on a Product")
+        print("5. Delte a Product")
+        print("6. Add Customer")
+        print("7. View Customers")
+        print("8. Register Order")
+        print("9. Delete Order")
+        print("10. Exit")
 
         choice = input("Choose an option (1–7): ")
 
@@ -20,14 +23,20 @@ def menu():
         elif choice == '2':
             viewProducts()
         elif choice == '3':
-            addCustomer()
+            searchProduct()
         elif choice == '4':
-            viewCustomers()
+            updatePrice()
         elif choice == '5':
-            registerOrder()
+            deleteProduct()
         elif choice == '6':
-            deleteOrder()
+            addCustomer()
         elif choice == '7':
+            viewCustomers()
+        elif choice == '8':
+            registerOrder()
+        elif choice == '9':
+            deleteOrder()
+        elif choice == '10':
             print("Goodbye! See you next time :)\n")
             break
         else:
