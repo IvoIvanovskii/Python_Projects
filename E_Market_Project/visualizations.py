@@ -1,20 +1,15 @@
 import matplotlib.pyplot as plt
-import mysql.connector
+from db import connect  
 from mysql.connector import Error
 
 def generate_market_visuals():
     try:
-        with mysql.connector.connect(
-            host="localhost",
-            user="root",
-            password="HOMEGROWN18ia!",
-            database="EMarket"
-        ) as conn:
+        with connect() as conn:  
             with conn.cursor() as cursor:
                 cursor.execute("SELECT price FROM products")
                 prices = [row[0] for row in cursor.fetchall() if row[0] is not None]
 
-                cursor.execute("SELECT product_name, quantity FROM products")  # FIXED COLUMN NAME
+                cursor.execute("SELECT product_name, quantity FROM products")
                 products = cursor.fetchall()
                 product_names = [row[0] for row in products]
                 quantities = [row[1] for row in products]
