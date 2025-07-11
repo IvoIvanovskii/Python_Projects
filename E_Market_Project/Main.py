@@ -1,6 +1,7 @@
 from Product import addProduct, viewProducts, searchProduct, updatePrice, deleteProduct
 from Customer import addCustomer, viewCustomers
 from Order import registerOrder, deleteOrder
+from Visualisation import generate_market_visuals  # <-- Import the visualization function
 
 def menu():
     while True:
@@ -9,14 +10,15 @@ def menu():
         print("2. View Products")
         print("3. Search Product")
         print("4. Update Price on a Product")
-        print("5. Delte a Product")
+        print("5. Delete a Product")  
         print("6. Add Customer")
         print("7. View Customers")
         print("8. Register Order")
         print("9. Delete Order")
-        print("10. Exit")
+        print("10. Show Market Visualisation")  
+        print("11. Exit")  
 
-        choice = input("Choose an option (1–10): ")
+        choice = input("Choose an option (1-11): ")
 
         if choice == '1':
             addProduct()
@@ -37,6 +39,8 @@ def menu():
         elif choice == '9':
             deleteOrder()
         elif choice == '10':
+            generate_market_visuals()  
+        elif choice == '11':
             print("Goodbye! See you next time :)\n")
             break
         else:
