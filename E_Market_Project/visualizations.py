@@ -6,7 +6,7 @@ def generate_market_visuals():
     conn = mysql.connector.connect(
         host="localhost",
         user="",       # ← Replace with your MySQL username
-        password="",   # ← Replace with your MySQL password
+        password="HOMEGROWN18ia!",   # ← Replace with your MySQL password
         database=""    # ← Replace with your database name
     )
     cursor = conn.cursor()
