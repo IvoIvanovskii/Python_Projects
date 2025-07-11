@@ -1,7 +1,7 @@
 from Product import addProduct, viewProducts, searchProduct, updatePrice, deleteProduct
 from Customer import addCustomer, viewCustomers
 from Order import registerOrder, deleteOrder
-from Visualisation import generate_market_visuals  # <-- Import the visualization function
+from visualizations import generate_market_visuals 
 
 def menu():
     while True:
